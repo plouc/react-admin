@@ -1,0 +1,67 @@
+{
+  "name": "react-admint",
+  "description": "React-Admin is a JavaScript library for building admin user interfaces.",
+  "version": "0.0.1",
+  "keywords": [
+    "react",
+    "admin"
+  ],
+  "homepage": "https://github.com/rande/react-admin",
+  "bugs": {
+    "url": "https://github.com/rande/react-admin/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "README.md",
+    "dist/",
+    "lib/"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rande/react-admin"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "react-bootstrap": "~0.13.0",
+    "react-router": "~0.11.4",
+    "reflux": "~0.2.1",
+    "lodash": "~2.4.1"
+  },
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-less": "~2.0.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-6to5": "~3.0.0",
+    "gulp-strip-debug": "~1.0.2",
+    "gulp-plumber": "~0.6.6",
+    "jest-cli": "~0.2.2",
+    "6to5-jest": "~3.0.0",
+    "jest": "~0.1.37",
+    "gulp-regex-replace": "~0.2.3"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/6to5-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ],
+    "unmockedModulePathPatterns": [
+      "./node_modules/react"
+    ],
+    "testPathDirs": [
+      "./src"
+    ]
+  },
+  "scripts": {
+    "test": "node ./node_modules/jest-cli/bin/jest.js"
+  }
+}

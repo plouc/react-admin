@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react');
-var R = require('react-router');
 
 var Icon = React.createClass({
   getDefaultProps: function() {

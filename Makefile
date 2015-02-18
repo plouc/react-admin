@@ -8,4 +8,4 @@ install:
 
 build:
 	gulp lib
-	find ./lib -name __tests__ -type d -exec rm -r {} \;
+	find ./lib -name __tests__ -type d | xargs rm -rf

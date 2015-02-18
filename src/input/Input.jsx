@@ -2,7 +2,6 @@
 
 var React = require('react');
 var B = require('react-bootstrap');
-var Router = require('react-router');
 var _ = require('lodash');
 
 var Base = {
@@ -21,7 +20,7 @@ var Base = {
     help: React.PropTypes.string,
     label: React.PropTypes.string,
     property: React.PropTypes.string,
-    form: React.PropTypes.object,
+    form: React.PropTypes.object
   },
 
   readValue: function(obj, path, def) {

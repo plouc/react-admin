@@ -30,6 +30,13 @@ module.exports = {
   BooleanRadio: RadioInput.BooleanRadio,
   Radio: RadioInput.Radio,
 
+  // Table
+  createTable: require("./lib/pager/Table").create,
+
   // Helpers
-  stubRouterContext: require("./lib/utils/stubRouterContext")
+  stubRouterContext: require("./lib/utils/stubRouterContext"),
+
+  Container: require("./lib/utils/Container"),
+
+  EndPoint: require("./lib/rest/EndPoint")
 };

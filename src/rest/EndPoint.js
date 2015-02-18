@@ -121,7 +121,7 @@ var EndPoint = function (baseurl, headers) {
   function buildUrl(suffix, query) {
     var baseurl = _.merge({}, url);
     baseurl.pathname += suffix;
-    baseurl.query = _.merge(baseurl.query, query || {});
+    baseurl.query = _.merge({}, baseurl.query, query || {});
 
     return Url.format(baseurl);
   }

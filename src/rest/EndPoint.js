@@ -12,7 +12,7 @@ var EndPoint = function (baseurl, headers) {
     var suffix, query, func;
     [suffix, query, func] = getParameters(arguments);
 
-    buildRequest(Request.get(buildUrl(suffix, query)))
+    buildRequest(Request('GET', buildUrl(suffix, query)))
       .end(func ? func : defaultHandler);
   }
 
@@ -20,7 +20,7 @@ var EndPoint = function (baseurl, headers) {
     var suffix, query, func;
     [suffix, query, func] = getParameters(arguments);
 
-    buildRequest(Request.del(buildUrl(suffix, query)))
+    buildRequest(Request('DELETE', buildUrl(suffix, query)))
       .end(func ? func : defaultHandler);
   }
 
@@ -28,7 +28,7 @@ var EndPoint = function (baseurl, headers) {
     var suffix, query, params, func;
     [suffix, query, params, func] = dataParameters(arguments);
 
-    buildRequest(Request.post(buildUrl(suffix, query)))
+    buildRequest(Request('POST', buildUrl(suffix, query)))
       .send(params)
       .end(func ? func : defaultHandler);
   }
@@ -37,7 +37,7 @@ var EndPoint = function (baseurl, headers) {
     var suffix, query, params, func;
     [suffix, query, params, func] = dataParameters(arguments);
 
-    buildRequest(Request.put(buildUrl(suffix, query)))
+    buildRequest(Request('PUT', buildUrl(suffix, query)))
       .send(params)
       .end(func ? func : defaultHandler);
   }

@@ -14,7 +14,10 @@
   "files": [
     "README.md",
     "dist/",
-    "lib/"
+    "lib/",
+    "index.js",
+    "LICENSE",
+    "CONTRIBUTING.md"
   ],
   "main": "index.js",
   "repository": {

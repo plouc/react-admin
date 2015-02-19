@@ -22,5 +22,4 @@ gulp.task('lib-compile', [ 'lib-clean' ], function(){
     .pipe(gulp.dest('./lib'));
 })
 
-
 gulp.task('lib', [ 'lib-clean', 'lib-compile'])

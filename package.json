@@ -28,8 +28,6 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "react": "^0.12.2",
-    "react-bootstrap": "~0.13.3",
     "lodash": "~2.4.1",
     "url": "~0.10.0",
     "superagent": ">=0.21"
@@ -40,6 +38,8 @@
   },
   "readmeFilename": "README.md",
   "devDependencies": {
+    "react": "^0.12.2",
+    "react-bootstrap": "~0.13.3",
     "del": "~1.1.1",
     "gulp": "~3.8.10",
     "gulp-less": "~2.0.1",

@@ -37,6 +37,8 @@ module.exports = {
   stubRouterContext: require("./lib/utils/stubRouterContext"),
 
   Container: require("./lib/utils/Container"),
+  ReadValue: require("./lib/utils/Property").ReadValue,
+  WriteValue: require("./lib/utils/Property").WriteValue,
 
   EndPoint: require("./lib/rest/EndPoint")
 };

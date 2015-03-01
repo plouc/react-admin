@@ -88,7 +88,7 @@ var Base = {
   },
 
   getStyle: function() {
-    return this.getErrors().length > 0 ? 'error' : '';
+    return this.getErrors().length > 0 ? 'error' : null;
   },
 
   setValue: function(value) {
@@ -114,7 +114,7 @@ var Base = {
       label={this.props.label}
       help={this.getHelp()}
       onChange={this.updateValue}
-      bsStyle={this.getErrors().length > 0 ? 'error' : ''}
+      bsStyle={this.getStyle()}
     />
   },
 };

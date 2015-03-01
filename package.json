@@ -19,7 +19,7 @@
     "LICENSE",
     "CONTRIBUTING.md"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rande/react-admin"

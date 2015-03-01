@@ -4,7 +4,6 @@ var React = require('react');
 var B = require('react-bootstrap');
 var Router = require('react-router');
 var RB = require('react-router-bootstrap')
-var ReactAdmin = require('react-admin');
 
 var _ = require('lodash');
 var Url = require('url');

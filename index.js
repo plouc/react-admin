@@ -41,4 +41,11 @@ module.exports = {
   WriteValue: require("./lib/utils/Property").WriteValue,
 
   EndPoint: require("./lib/rest/EndPoint")
+
+  // Status
+  Status: {
+      Action: require("./lib/store/Status").Action,
+      Component: require("./lib/store/Status").Component,
+      Store: require("./lib/store/Status").Store
+  }
 };

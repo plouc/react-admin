@@ -14,7 +14,7 @@ var BaseSelect = {
       label={this.props.label}
       help={this.getHelp()}
       onChange={this.updateValue}
-      bsStyle={this.getErrors().length > 0 ? 'error' : null}
+      bsStyle={this.getStyle()}
     >
       {this.props.children}
     </B.Input>
@@ -40,7 +40,7 @@ var BooleanSelectInput = Input.create(BaseSelect, {
       label={this.props.label}
       help={this.getHelp()}
       onChange={this.updateValue}
-      bsStyle={this.getErrors().length > 0 ? 'error' : ''}
+      bsStyle={this.getStyle()}
     >
     {this.props.children}
     </B.Input>

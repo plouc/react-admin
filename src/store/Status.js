@@ -11,7 +11,7 @@ var store = Reflux.createStore({
     this.listenTo(action, this.onUpdate);
   },
   onUpdate: function() {
-    this.trigger.call(arguments);
+    this.trigger.apply(this, arguments);
   }
 });
 
@@ -34,7 +34,7 @@ var component = React.createClass({
         });
     },
     componentDidMount: function () {
-        this.listenTo(statusStore, this.onStatusChange);
+        this.listenTo(store, this.onStatusChange);
     },
     render: function() {
         if (!this.state.show) {

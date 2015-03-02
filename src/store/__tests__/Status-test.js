@@ -1,12 +1,12 @@
 /** @jsx React.DOM */
 
-jest.dontMock('../Status.js');
+jest.dontMock('../Status.jsx');
 jest.dontMock('lodash');
 jest.dontMock('reflux');
 
 describe('Status', function() {
   it('Test status action factory', function() {
-    var Status = require('../Status');
+    var Status = require('../Status.jsx');
 
     var action = Status.Action;
     var store = Status.Store;

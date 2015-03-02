@@ -44,8 +44,15 @@ module.exports = {
 
   // Status
   Status: {
-      Action: require("./store/Status").Action,
-      Component: require("./store/Status").Component,
-      Store: require("./store/Status").Store
+      Action: require("./store/Status.jsx").Action,
+      Component: require("./store/Status.jsx").Component,
+      Store: require("./store/Status.jsx").Store
+  },
+
+  // Notification
+  Notification: {
+      Action: require("./store/Notification.jsx").Action,
+      Component: require("./store/Notification.jsx").Component,
+      Store: require("./store/Notification.jsx").Store
   }
 };

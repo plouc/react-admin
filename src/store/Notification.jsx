@@ -41,13 +41,16 @@ var component = React.createClass({
         var pos = 0;
         return (
           <div className="react-app-notifications">
+            <h1>Notifications</h1>
+            <div>
             {_.map(this.state.notifications, function(notification) {
 
-                element[1].key = "react-app-notification-element-" + pos;
+                notification[1].key = "react-app-notification-element-" + pos;
                 pos++;
 
                 return React.createElement(notification[0], notification[1]);
             }, this)}
+            </div>
           </div>
         );
     }

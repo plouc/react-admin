@@ -1,33 +1,34 @@
 'use strict'
 
-var React = require('react');
+var React      = require('react');
 var ReactAdmin = require('react-admin');
-var Router = require('react-router');
-var _ = require('lodash');
+var Router     = require('react-router');
+var _          = require('lodash');
 
-var Form = require('./Form.jsx');
-var List = require('./List.jsx');
+var Form       = require('./Form.jsx');
+var List       = require('./List.jsx');
 
 /**
  * This is used to build the nested view required by React Router
  */
 var View = React.createClass({
-  render: function() {
-    return <Router.RouteHandler />
-  }
+    render: function() {
+        return <Router.RouteHandler />
+    }
 });
 
 /**
  * Define the routes required to list or edit the node
  */
 function getRoutes() {
-  return <Router.Route name="app1" handler={View} >
+    return (
+        <Router.Route name="app1" handler={View} >
+            <Router.Route name="app1.list" path="list" handler={List} />
+            <Router.Route name="app1.edit" path="edit/:uuid" handler={Form} />
 
-    <Router.Route name="app1.list"  path="list" handler={List} />
-    <Router.Route name="app1.edit"  path="edit/:uuid" handler={Form} />
-
-    <Router.DefaultRoute handler={List} />
-  </Router.Route>
+            <Router.DefaultRoute handler={List} />
+        </Router.Route>
+    );
 }
 
 //var historyStore = require('./stores/History.jsx')();
@@ -47,5 +48,5 @@ function getRoutes() {
 //});
 
 module.exports = {
-  getRoutes: getRoutes
-}
+    getRoutes: getRoutes
+};

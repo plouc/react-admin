@@ -143,7 +143,9 @@ gulp.task('demo.js', ['demo.clean.js'], function(cb) {
           paths: ['./node_modules', './demo/src'],
           fullPaths: false
         })
-        .transform(reactify)
+        .transform(reactify, {
+            es6: true
+        })
         .bundle()
         .pipe(source('app.js'))
         .pipe(buffer())
